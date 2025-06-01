@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (isActive) {
                 bookmarkImg.src = 'assets/icons8-bookmark-30.png';
                 bookmarkIconContainer.dataset.active = 'false';
-                toastText = "Restaurante removido dos favoritos!";
+                toastText = "Restaurante removido dos 'Salvos'!";
                 toastBgColor = "#FF5252";
             } else {
                 bookmarkImg.src = 'assets/icons8-bookmark-30 (1).png';
@@ -27,10 +27,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 text: toastText,
                 duration: 2000,
                 gravity: "top",
-                position: "left", // MUDANÇA AQUI: de "center" para "left"
+                position: "left",
                 offset: {
-                    x: 10,
-                    y: 10
+                    x: 120,
+                    y: 100
                 },
                 backgroundColor: toastBgColor,
                 stopOnFocus: true,
@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 text: "Avaliação enviada com sucesso!",
                 duration: 2000,
                 gravity: "top",
-                position: "left", // MUDANÇA AQUI: de "center" para "left"
+                position: "left", 
                 offset: {
                     x: 10,
                     y: 10

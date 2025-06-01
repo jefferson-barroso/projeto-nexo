@@ -1,7 +1,5 @@
-/* Importar fontes do Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Orbitron:wght@600&display=swap');
 
-/* Estilos globais e de corpo (iguais às telas anteriores) */
 body {
     margin: 0;
     padding: 0;
@@ -26,7 +24,6 @@ body {
     flex-direction: column;
 }
 
-/* Cabeçalho (similar às telas anteriores) */
 .header {
     width: 100%;
     height: 101px;
@@ -100,18 +97,17 @@ body {
     object-fit: contain;
 }
 
-/* Conteúdo Rolável da Tela de Perfil */
 .profile-content-scrollable {
     flex: 1;
     overflow-y: scroll;
-    padding-bottom: 90px; /* Espaço para a barra de navegação inferior */
+    padding-bottom: 90px;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
     -ms-overflow-style: none;
-    display: flex; /* Usar flexbox para organizar o conteúdo */
+    display: flex; 
     flex-direction: column;
-    align-items: center; /* Centralizar horizontalmente */
-    padding-top: 40px; /* Espaço do topo do conteúdo */
+    align-items: center;
+    padding-top: 40px;
 }
 
 .profile-content-scrollable::-webkit-scrollbar {
@@ -122,15 +118,15 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 40px; /* Espaço abaixo do cabeçalho do perfil */
+    margin-bottom: 40px; 
 }
 
 .profile-avatar-container {
-    width: 150px; /* Tamanho do círculo do avatar */
+    width: 150px; 
     height: 150px;
     border-radius: 50%;
-    background: linear-gradient(90deg, #5CE0E5 0%, #AF52DE 100%); /* Gradiente da borda */
-    padding: 5px; /* Espessura da borda colorida */
+    background: linear-gradient(90deg, #5CE0E5 0%, #AF52DE 100%); 
+    padding: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -142,8 +138,7 @@ body {
     height: 100%;
     border-radius: 50%;
     object-fit: cover;
-    background-color: #707070; /* Cor de fundo para a imagem de avatar (cinza) */
-    /* Remove a borda padrão da imagem se houver */
+    background-color: #707070;
     border: none;
 }
 
@@ -156,12 +151,12 @@ body {
 }
 
 .profile-options {
-    width: 90%; /* Largura da área de opções */
-    max-width: 380px; /* Limita a largura máxima */
-    background-color: #333; /* Fundo das opções */
+    width: 90%; 
+    max-width: 380px; 
+    background-color: #333;
     border-radius: 10px;
-    overflow: hidden; /* Garante que as bordas arredondadas funcionem */
-    margin-bottom: 40px; /* Espaço antes do botão de logout */
+    overflow: hidden; 
+    margin-bottom: 40px; 
 }
 
 .option-item {
@@ -169,29 +164,29 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 15px 20px;
-    border-bottom: 1px solid #444; /* Linha divisória */
+    border-bottom: 1px solid #444; 
     text-decoration: none;
     color: #FFFFFF;
     transition: background-color 0.2s ease;
 }
 
 .option-item:last-child {
-    border-bottom: none; /* Remove a borda da última opção */
+    border-bottom: none; 
 }
 
-.option-item:active { /* Feedback visual ao clicar */
-    background-color:  #AF52DE; /* Cor de clique (verde, pode ser ajustado) */
+.option-item:active { 
+    background-color:  #AF52DE; 
 }
 
 
 .option-left {
     display: flex;
     align-items: center;
-    gap: 15px; /* Espaço entre o ícone e o texto */
+    gap: 15px; 
 }
 
 .option-icon {
-    width: 24px; /* Tamanho dos ícones de opção */
+    width: 24px; 
     height: 24px;
     object-fit: contain;
 }
@@ -202,12 +197,7 @@ body {
     font-weight: 500;
 }
 
-.option-arrow {
-    width: 20px; /* Tamanho da seta */
-    height: 20px;
-    object-fit: contain;
-    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(80%); /* Cinza claro */
-}
+
 
 .logout-section {
     width: 90%;
@@ -216,9 +206,9 @@ body {
 }
 
 .logout-button {
-    background: transparent; /* Sem fundo */
-    border: 2px solid #FF5252; /* Borda vermelha */
-    color: #FF5252; /* Texto vermelho */
+    background: transparent; 
+    border: 2px solid #FF5252;
+    color: #FF5252; 
     font-family: 'Montserrat', sans-serif;
     font-size: 18px;
     font-weight: 700;
@@ -228,9 +218,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px; /* Espaço entre texto e seta */
-    width: 100%; /* Ocupa a largura total */
-    box-sizing: border-box; /* Inclui padding e borda na largura */
+    gap: 10px; 
+    width: 100%; 
+    box-sizing: border-box;
     transition: background-color 0.2s ease, color 0.2s ease;
 }
 
@@ -240,8 +230,6 @@ body {
 }
 
 
-
-/* Barra de Navegação Inferior (igual às telas anteriores) */
 .bottom-nav-bar {
     position: absolute;
     bottom: 0;
@@ -266,7 +254,7 @@ body {
     padding-top: 10px;
     padding-bottom: 10px;
     text-decoration: none;
-    opacity: 0.7; /* Ícones inativos */
+    opacity: 0.7; 
 }
 
 .nav-bar-item img {
@@ -275,7 +263,6 @@ body {
     object-fit: contain;
 }
 
-/* Estado ativo para o ícone de navegação da tela atual */
 .nav-bar-item.active {
-    opacity: 1; /* Ícone ativo */
+    opacity: 1;
 }
