@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Juju - Nexo App</title>
+    <link rel="stylesheet" href="restaurante1.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Orbitron:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <header class="header">
+            <div class="status-bar">
+            </div>
+            
+            <div class="notch-placeholder">
+                <div class="notch-gradient"></div>
+            </div>
+
+            <img src="assets/nexo_logo.png" alt="Nexo Logo" class="nexo-logo">            </a>
+            
+        </header>
+
+        <main class="details-content-scrollable">
+            <div class="main-image-container">
+                <img src="assets/restaurante1.jpg" alt="Dom Juju Imagem" class="main-restaurant-image">
+            </div>
+
+            <div class="restaurant-details-section">
+     <h1 class="restaurant-title">
+                    DOM JUJU 
+                    <span class="bookmark-icon" id="bookmarkIcon" data-active="false">
+                        <img src="assets/icons8-bookmark-30.png" alt="Bookmark" id="bookmarkImg">
+                    </span>
+                </h1>
+                <p class="restaurant-description">
+                    Dom Juju é mais do que um restaurante — Do almoço rápido ao jantar especial, cada refeição
+                    aqui é uma experiência única. Ambiente acolhedor, atendimento com alma e um cardápio
+                    que mistura o caseiro com o sofisticado — esse é o
+                    jeitinho Dom Juju de receber você.
+                    Sinta-se em casa. Viva o sabor. Viva o Dom Juju.
+                </p>
+
+                <div class="action-buttons">
+                    <a href="#" class="btn visit-site">Visitar Site</a>
+                    <a href="#" class="icon-link"><img src="assets/icons8-place-marker-50 (1).png" alt="Localização"></a>
+                    <a href="#" class="icon-link"><img src="assets/icons8-instagram-48.png" alt="Instagram"></a>
+                    <a href="#" class="icon-link"><img src="assets/icons8-ifood-48.png" alt="iFood"></a>
+                </div>
+            </div>
+
+            <div class="ratings-section">
+                <h3 class="section-title">Notas e Avaliações</h3>
+                <div class="overall-rating-container">
+                    <p class="overall-rating-number">4.5</p>
+                    <div class="overall-stars">
+                        <span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star empty">★</span>
+                    </div>
+                </div>
+                <p class="leave-review" id="leaveReviewText">Deixe sua opinião</p>
+
+                <div class="review-form-container" id="reviewFormContainer">
+                    <div class="rating-stars-input" id="ratingStarsInput">
+                        <span class="star-input" data-value="1">★</span>
+                        <span class="star-input" data-value="2">★</span>
+                        <span class="star-input" data-value="3">★</span>
+                        <span class="star-input" data-value="4">★</span>
+                        <span class="star-input" data-value="5">★</span>
+                    </div>
+                    <textarea id="reviewTextarea" placeholder="Escreva sua avaliação aqui..." rows="4"></textarea>
+                    <button id="submitReviewBtn">Enviar avaliação</button>
+                </div>
+                <h3 class="section-title">Acompanhe as avaliações</h3>
+                <div class="user-review">
+                    <img src="assets/pexels-justin-shaifer-501272-1222271.jpg" alt="Avatar do Usuário" class="user-avatar">
+                    <div class="review-content">
+                        <p class="reviewer-name">Mariano Munhoz</p>
+                        <div class="review-stars">
+                            <span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span>
+                        </div>
+                        <p class="review-text">Um dos melhores da região, comida de qualidade</p>
+                    </div>
+                </div>
+                 <div class="user-review">
+                 <img src="assets/pexels-olly-774909.jpg" alt="Avatar do Usuário" class="user-avatar"> <div class="review-content">
+         <p class="reviewer-name">Josefa</p> <div class="review-stars"> <span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span> </div> <Até class="review-text">Até que da pro gasto</p> </div>
+                </div>
+                </div>
+        </main>
+
+        <footer class="bottom-nav-bar">
+            <a href="#" class="nav-bar-item">
+                <img src="assets/home_6659782.png" alt="Home Icon">
+            </a>
+            <a href="#" class="nav-bar-item">
+                <img src="assets/loupe.png" alt="Search Icon">
+            </a>
+            <a href="#" class="nav-bar-item">
+                <img src="assets/bookmark.png" alt="Bookmark Icon">
+            </a>
+            <a href="#" class="nav-bar-item">
+                <img src="assets/user.png" alt="Person Icon">
+            </a>
+        </footer>
+    </div>
+        <script src="restaurante1.js"></script>
+
+</body>
+</html>

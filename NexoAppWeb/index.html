@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexo App - Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Orbitron:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <header class="header">
+            <div class="status-bar">
+
+            </div>
+            
+            <div class="notch-placeholder">
+                <div class="notch-gradient"></div>
+            </div>
+
+            <img src="assets/nexo_logo.png" alt="Nexo Logo" class="nexo-logo">
+
+        </header>
+
+        <main class="main-content-scrollable">
+            <section class="category-section">
+                <h2 class="category-title">Bares e pubs</h2>
+                <div class="carousel-container" id="barsCarousel">
+                    <div class="carousel-item" data-index="0">
+                        <img src="assets/bar1.jpg" alt="Trend's" class="carousel-image">
+                        <div class="carousel-info">
+                            <span class="carousel-name">Trend's</span>
+                            <div class="star-rating">
+                                <span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star empty">★</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-index="1">
+                        <img src="assets/bar2.jpg" alt="Bar da Esquina" class="carousel-image">
+                        <div class="carousel-info">
+                            <span class="carousel-name">Bar da Esquina</span>
+                            <div class="star-rating">
+                                <span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star empty">★</span><span class="star empty">★</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-index="2">
+                        <img src="assets/bar3.jpg" alt="Pub Legal" class="carousel-image">
+                        <div class="carousel-info">
+                            <span class="carousel-name">Pub Legal</span>
+                            <div class="star-rating">
+                                <span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-indicators" data-carousel-id="barsCarousel">
+                    <span class="indicator active" data-index="0"></span>
+                    <span class="indicator" data-index="1"></span>
+                    <span class="indicator" data-index="2"></span>
+                </div>
+            </section>
+
+            <section class="category-section">
+                <h2 class="category-title">Restaurantes</h2>
+                <div class="carousel-container" id="restaurantsCarousel">
+                    <div  href="restaurante1.html" class="carousel-item" data-index="0">
+                        <img src="assets/restaurante1.jpg" alt="Dom Juju" class="carousel-image">
+                        <div class="carousel-info">
+                            <span class="carousel-name">Dom Juju</span>
+                            <div class="star-rating">
+                                <span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-index="1">
+                        <img src="assets/restaurante2.jpg" alt="Comida Boa" class="carousel-image">
+                        <div class="carousel-info">
+                            <span class="carousel-name">Comida Boa</span>
+                            <div class="star-rating">
+                                <span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star empty">★</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-index="2">
+                        <img src="assets/restaurante3.jpg" alt="Sabores" class="carousel-image">
+                        <div class="carousel-info">
+                            <span class="carousel-name">Sabores</span>
+                            <div class="star-rating">
+                                <span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star empty">★</span><span class="star empty">★</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-indicators" data-carousel-id="restaurantsCarousel">
+                    <span class="indicator active" data-index="0"></span>
+                    <span class="indicator" data-index="1"></span>
+                    <span class="indicator" data-index="2"></span>
+                </div>
+            </section>
+
+            <section class="category-section">
+                <h2 class="category-title">Baladas e festas</h2>
+                <div class="carousel-container" id="partiesCarousel">
+                    <div class="carousel-item" data-index="0">
+                        <img src="assets/party1.jpg" alt="Nome da Balada" class="carousel-image">
+                        <div class="carousel-info">
+                            <span class="carousel-name">Nome da Balada</span>
+                            <div class="star-rating">
+                                <span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star empty">★</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-index="1">
+                        <img src="assets/party2.jpg" alt="Festa Legal" class="carousel-image">
+                        <div class="carousel-info">
+                            <span class="carousel-name">Festa Legal</span>
+                            <div class="star-rating">
+                                <span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-indicators" data-carousel-id="partiesCarousel">
+                    <span class="indicator active" data-index="0"></span>
+                    <span class="indicator" data-index="1"></span>
+                </div>
+            </section>
+
+            <section class="category-section">
+                <h2 class="category-title">Shows e festivais de música</h2>
+                <div class="carousel-container" id="showsCarousel">
+                    <div class="carousel-item" data-index="0">
+                        <img src="assets/show1.jpg" alt="Show Ao Vivo" class="carousel-image">
+                        <div class="carousel-info">
+                            <span class="carousel-name">Show Ao Vivo</span>
+                            <div class="star-rating">
+                                <span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star empty">★</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-index="1">
+                        <img src="assets/show2.jpg" alt="Festival Indie" class="carousel-image">
+                        <div class="carousel-info">
+                            <span class="carousel-name">Festival Indie</span>
+                            <div class="star-rating">
+                                <span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star empty">★</span><span class="star empty">★</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-indicators" data-carousel-id="showsCarousel">
+                    <span class="indicator active" data-index="0"></span>
+                    <span class="indicator" data-index="1"></span>
+                </div>
+            </section>
+
+            <section class="category-section">
+                <h2 class="category-title">Cinema</h2>
+                <div class="carousel-container" id="cinemaCarousel">
+                    <div class="carousel-item" data-index="0">
+                        <img src="assets/cinema1.jpg" alt="Cine Max" class="carousel-image">
+                        <div class="carousel-info">
+                            <span class="carousel-name">Cine Max</span>
+                            <div class="star-rating">
+                                <span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-index="1">
+                        <img src="assets/cinema2.jpg" alt="Cinemark" class="carousel-image">
+                        <div class="carousel-info">
+                            <span class="carousel-name">Cinemark</span>
+                            <div class="star-rating">
+                                <span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star empty">★</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-indicators" data-carousel-id="cinemaCarousel">
+                    <span class="indicator active" data-index="0"></span>
+                    <span class="indicator" data-index="1"></span>
+                </div>
+            </section>
+
+            <section class="category-section">
+                <h2 class="category-title">Teatro e espetáculos culturais</h2>
+                <div class="carousel-container" id="theaterCarousel">
+                    <div class="carousel-item" data-index="0">
+                        <img src="assets/theater1.jpg" alt="Teatro Municipal" class="carousel-image">
+                        <div class="carousel-info">
+                            <span class="carousel-name">Teatro Municipal</span>
+                            <div class="star-rating">
+                                <span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star empty">★</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-index="1">
+                        <img src="assets/theater2.jpg" alt="Espetáculo A" class="carousel-image">
+                        <div class="carousel-info">
+                            <span class="carousel-name">Espetáculo A</span>
+                            <div class="star-rating">
+                                <span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-indicators" data-carousel-id="theaterCarousel">
+                    <span class="indicator active" data-index="0"></span>
+                    <span class="indicator" data-index="1"></span>
+                </div>
+            </section>
+
+            <section class="category-section">
+                <h2 class="category-title">Feiras e exposições</h2>
+                <div class="carousel-container" id="fairsCarousel">
+                    <div class="carousel-item" data-index="0">
+                        <img src="assets/fair1.jpg" alt="Feira Artesanal" class="carousel-image">
+                        <div class="carousel-info">
+                            <span class="carousel-name">Feira Artesanal</span>
+                            <div class="star-rating">
+                                <span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star empty">★</span><span class="star empty">★</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-index="1">
+                        <img src="assets/fair2.jpg" alt="Expo Tech" class="carousel-image">
+                        <div class="carousel-info">
+                            <span class="carousel-name">Expo Tech</span>
+                            <div class="star-rating">
+                                <span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star empty">★</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-indicators" data-carousel-id="fairsCarousel">
+                    <span class="indicator active" data-index="0"></span>
+                    <span class="indicator" data-index="1"></span>
+                </div>
+            </section>
+
+            <section class="category-section">
+                <h2 class="category-title">Eventos esportivos</h2>
+                <div class="carousel-container" id="sportsCarousel">
+                    <div class="carousel-item" data-index="0">
+                        <img src="assets/sport1.jpg" alt="Jogo de Futebol" class="carousel-image">
+                        <div class="carousel-info">
+                            <span class="carousel-name">Jogo de Futebol</span>
+                            <div class="star-rating">
+                                <span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-index="1">
+                        <img src="assets/sport2.jpg" alt="Maratona Outonal" class="carousel-image">
+                        <div class="carousel-info">
+                            <span class="carousel-name">Maratona Outonal</span>
+                            <div class="star-rating">
+                                <span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star empty">★</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-indicators" data-carousel-id="sportsCarousel">
+                    <span class="indicator active" data-index="0"></span>
+                    <span class="indicator" data-index="1"></span>
+                </div>
+            </section>
+        </main>
+
+        <footer class="bottom-nav-bar">
+            <a href="#" class="nav-bar-item">
+                <img src="assets/home_6659782.png" alt="Home Icon">
+            </a>
+            <a href="#" class="nav-bar-item">
+                <img src="assets/magnifier.png" alt="Search Icon">
+            </a>
+            <a href="#" class="nav-bar-item">
+                <img src="assets/bookmark.png" alt="Bookmark Icon">
+            </a>
+            <a href="#" class="nav-bar-item">
+                <img src="assets/user.png" alt="Person Icon">
+            </a>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
