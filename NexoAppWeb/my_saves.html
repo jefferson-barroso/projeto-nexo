@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Salvos - Nexo App</title>
+    <link rel="stylesheet" href="my_saves.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Orbitron:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <header class="header">
+
+            <div class="notch-placeholder">
+                <div class="notch-gradient"></div>
+            </div>
+
+            <a href="profile.html" class="back-button">
+            </a>
+            
+            <h1 class="header-title">Meus Salvos</h1>
+
+        </header>
+
+        <main class="my-saves-content-scrollable">
+            <div class="saved-item-card" data-item-id="domjuju">
+                <a href="restaurante1.html" class="saved-item-link">
+                    <img src="assets/restaurante1.jpg" alt="Dom Juju" class="saved-item-image">
+                    <div class="saved-item-info">
+                        <span class="saved-item-name">DOM JUJU</span>
+                        <p>Breve descricao.</p>
+                        <div class="saved-item-stars">
+                            <span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star empty">★</span>
+                        </div>
+                        <span class="saved-item-rating-number">4.5</span>
+                    </div>
+                </a>
+                <span class="saved-bookmark-icon" data-active="true">
+                    <img src="assets/icons8-bookmark-30 (1).png" alt="Desmarcar" class="bookmark-img">
+                </span>
+            </div>
+
+
+            </main>
+
+        <footer class="bottom-nav-bar">
+            <a href="index.html" class="nav-bar-item">
+                <img src="assets/home_6659782.png" alt="Home Icon">
+            </a>
+            <a href="#" class="nav-bar-item">
+                <img src="assets/magnifier.png" alt="Search Icon">
+            </a>
+            <a href="#" class="nav-bar-item active"> <img src="assets/bookmark.png" alt="Bookmark Icon">
+            </a>
+            <a href="profile.html" class="nav-bar-item">
+                <img src="assets/user.png" alt="Person Icon">
+            </a>
+        </footer>
+    </div>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="my_saves.js"></script> </body>
+</html>
