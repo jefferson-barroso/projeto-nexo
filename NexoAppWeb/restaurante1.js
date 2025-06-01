@@ -1,7 +1,6 @@
-
-
 document.addEventListener('DOMContentLoaded', () => {
-    // --- LÓGICA DO BOOKMARK ---
+    const appContainer = document.querySelector('.app-container');
+
     const bookmarkIconContainer = document.getElementById('bookmarkIcon');
     const bookmarkImg = document.getElementById('bookmarkImg');
 
@@ -9,26 +8,47 @@ document.addEventListener('DOMContentLoaded', () => {
         bookmarkIconContainer.addEventListener('click', () => {
             const isActive = bookmarkIconContainer.dataset.active === 'true';
 
-            if (isActive) {
-                bookmarkImg.src = 'assets/icons8-bookmark-30.png'; // Caminho para a imagem "vazia"
-                bookmarkIconContainer.dataset.active = 'false';
-                console.log('Restaurante removido dos favoritos!');
-            } else {
-                bookmarkImg.src = 'assets/icons8-bookmark-30 (1).png'; // Caminho para a imagem "roxinha"
-                bookmarkIconContainer.dataset.active = 'true';
-                console.log('Restaurante adicionado aos favoritos!');
-            }
-        });
+            let toastText = "";
+            let toastBgColor = "";
 
-        // Opcional: Carregar o estado inicial do bookmark (se salvo anteriormente)
-        // Lembre-se que 'icons8-bookmark-30 (1).png' é o roxinho e 'icons8-bookmark-30.png' é o vazio
-        // if (localStorage.getItem('restaurante_domjuju_favorito') === 'true') {
-        //     bookmarkImg.src = 'assets/icons8-bookmark-30 (1).png';
-        //     bookmarkIconContainer.dataset.active = 'true';
-        // }
+            if (isActive) {
+                bookmarkImg.src = 'assets/icons8-bookmark-30.png';
+                bookmarkIconContainer.dataset.active = 'false';
+                toastText = "Restaurante removido dos favoritos!";
+                toastBgColor = "#FF5252";
+            } else {
+                bookmarkImg.src = 'assets/icons8-bookmark-30 (1).png';
+                bookmarkIconContainer.dataset.active = 'true';
+                toastText = "Restaurante Salvo!";
+                toastBgColor = "#AF52DE";
+            }
+
+            Toastify({
+                text: toastText,
+                duration: 2000,
+                gravity: "top",
+                position: "left", // MUDANÇA AQUI: de "center" para "left"
+                offset: {
+                    x: 10,
+                    y: 10
+                },
+                backgroundColor: toastBgColor,
+                stopOnFocus: true,
+                selector: appContainer,
+                style: {
+                    borderRadius: "10px",
+                    padding: "12px 20px",
+                    fontSize: "15px",
+                    fontFamily: "'Montserrat', sans-serif",
+                    position: "absolute",
+                    zIndex: "9999",
+                    width: "fit-content",
+                    maxWidth: "80%"
+                }
+            }).showToast();
+        });
     }
 
-    // --- LÓGICA DA AVALIAÇÃO ---
     const leaveReviewText = document.getElementById('leaveReviewText');
     const reviewFormContainer = document.getElementById('reviewFormContainer');
     const ratingStarsInput = document.getElementById('ratingStarsInput');
@@ -36,22 +56,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const reviewTextarea = document.getElementById('reviewTextarea');
     const submitReviewBtn = document.getElementById('submitReviewBtn');
 
-    let currentRating = 0; 
-    // Mostrar/Ocultar o formulário de avaliação
+    let currentRating = 0;
+
     if (leaveReviewText && reviewFormContainer) {
         leaveReviewText.addEventListener('click', () => {
-            reviewFormContainer.classList.toggle('active'); // Alterna a visibilidade
-            // Opcional: Se o formulário for aberto, rolar para ele
+            reviewFormContainer.classList.toggle('active');
             if (reviewFormContainer.classList.contains('active')) {
                 reviewFormContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
             }
         });
     }
 
-    // Funcionalidade de preenchimento das estrelas
     if (ratingStarsInput) {
         starInputs.forEach(star => {
-            // Ao passar o mouse sobre a estrela
             star.addEventListener('mouseover', () => {
                 const value = parseInt(star.dataset.value);
                 starInputs.forEach((s, i) => {
@@ -63,7 +80,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             });
 
-            // Ao tirar o mouse (resetar para a avaliação atual)
             star.addEventListener('mouseout', () => {
                 starInputs.forEach((s, i) => {
                     if (i < currentRating) {
@@ -74,10 +90,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             });
 
-            // Ao clicar na estrela (definir a avaliação)
             star.addEventListener('click', () => {
                 currentRating = parseInt(star.dataset.value);
-                // Preenche as estrelas permanentemente com a avaliação clicada
                 starInputs.forEach((s, i) => {
                     if (i < currentRating) {
                         s.classList.add('filled');
@@ -85,15 +99,13 @@ document.addEventListener('DOMContentLoaded', () => {
                         s.classList.remove('filled');
                     }
                 });
-                console.log('Avaliação selecionada:', currentRating);
             });
         });
     }
 
-    //  Enviar a avaliação
     if (submitReviewBtn) {
         submitReviewBtn.addEventListener('click', () => {
-            const reviewText = reviewTextarea.value.trim(); 
+            const reviewText = reviewTextarea.value.trim();
             
             if (currentRating === 0) {
                 alert('Por favor, selecione uma avaliação em estrelas!');
@@ -104,17 +116,34 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
 
-            // Simulação de envio
-            console.log('--- Nova Avaliação Enviada ---');
-            console.log('Nota:', currentRating);
-            console.log('Comentário:', reviewText);
-            alert('Sua avaliação foi enviada com sucesso!');
+            Toastify({
+                text: "Avaliação enviada com sucesso!",
+                duration: 2000,
+                gravity: "top",
+                position: "left", // MUDANÇA AQUI: de "center" para "left"
+                offset: {
+                    x: 10,
+                    y: 10
+                },
+                backgroundColor: "#4CAF50",
+                stopOnFocus: true,
+                selector: appContainer,
+                style: {
+                    borderRadius: "10px",
+                    padding: "12px 20px",
+                    fontSize: "15px",
+                    fontFamily: "'Montserrat', sans-serif",
+                    position: "absolute",
+                    zIndex: "9999",
+                    width: "fit-content",
+                    maxWidth: "80%"
+                }
+            }).showToast();
 
-            //Resetar o formulário
             currentRating = 0;
             starInputs.forEach(s => s.classList.remove('filled'));
             reviewTextarea.value = '';
-            reviewFormContainer.classList.remove('active'); // Oculta o formulário novamente
+            reviewFormContainer.classList.remove('active');
         });
     }
 });
