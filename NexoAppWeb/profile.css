@@ -229,6 +229,9 @@ body {
     color: #FFFFFF;
 }
 
+.logout-button:active .logout-arrow {
+    filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(0deg) brightness(100%) contrast(100%); /* Seta branca ao clicar */
+}
 
 .bottom-nav-bar {
     position: absolute;
