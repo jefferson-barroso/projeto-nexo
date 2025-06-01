@@ -14,12 +14,12 @@ document.addEventListener('DOMContentLoaded', () => {
             if (isActive) {
                 bookmarkImg.src = 'assets/icons8-bookmark-30.png';
                 bookmarkIconContainer.dataset.active = 'false';
-                toastText = "Restaurante removido dos 'Salvos'!";
+                toastText = "Restaurante removido dos favoritos!";
                 toastBgColor = "#FF5252";
             } else {
                 bookmarkImg.src = 'assets/icons8-bookmark-30 (1).png';
                 bookmarkIconContainer.dataset.active = 'true';
-                toastText = "Restaurante Salvo!";
+                toastText = "Restaurante favoritado!";
                 toastBgColor = "#AF52DE";
             }
 
