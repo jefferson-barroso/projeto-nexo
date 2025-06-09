@@ -16,7 +16,7 @@ body {
     position: relative;
     width: 440px; /* Ajuste conforme necessário para o tamanho do seu "celular" */
     height: 956px; /* Ajuste conforme necessário */
-    background: #000000; /* Fundo preto conforme a imagem */
+    background:  #262626; /* Fundo preto conforme a imagem */
     overflow: hidden;
     border-radius: 30px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
